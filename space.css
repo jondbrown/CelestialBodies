@@ -1,0 +1,416 @@
+html {
+    background-color: black;
+    height:  100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    height:  100%;
+    width: 100%;
+    background-color: black;
+    overflow-x: hidden;
+}
+/* APP SPACE */
+#space {
+    width: 100%;
+    background-color: black;
+    height: 80%;
+    overflow-x: hidden;
+    z-index: -1;
+}
+
+/* SCALE */
+#ruler {
+    width: 10px;
+    background: rgba(0 0 0 0);
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-top-color: antiquewhite;
+    border-bottom-color: antiquewhite;
+    left: 5px;
+    position: absolute;
+    bottom: '20%';
+    display: none;
+    overflow: visible !important;
+    z-index: 999;
+    line-height: 20px;
+    line-height: 1em;
+}
+
+#rulerH {
+    height: 10px;
+    background: rgba(0 0 0 0);
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-right-color: antiquewhite;
+    border-left-color: antiquewhite;
+    position: absolute;
+    bottom: '10%';
+    display: none;
+    overflow: visible !important;
+    z-index: 999;
+}
+
+#grid {
+    height: 100%;
+    background-color: #000;
+    background-position: bottom;
+    background-position: -2px -2px,-1px -1px, -1px -1px;
+    background-image: -webkit-linear-gradient(grey 1px, transparent 1px), -webkit-linear-gradient(0, grey 1px, transparent 1px), -webkit-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px), -webkit-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px);
+    /*background-image: -moz-linear-gradient(grey 2px, transparent 2px), -moz-linear-gradient(0, grey 2px, transparent 2px), -moz-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px), -moz-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px);
+    background-image: linear-gradient(to top, grey 1px, transparent 1px), linear-gradient(90deg, grey 1px, transparent 1px), linear-gradient(bottom, rgba(255, 255, 255, .3) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .3) 1px, transparent 1px);*/
+}
+
+#start {
+    height: 100px;
+    width: 150px;
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+#shortcuts {
+    color: aliceblue;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    display: none;
+    
+}
+
+#site {
+    color: aliceblue;
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    display: inline;
+}
+
+}
+#home:hover {
+    opacity: 0.7;
+           
+}
+
+#buttons {
+    color: aliceblue;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+    display: none;
+}
+
+#spacer {
+    padding: 5px;
+    display: inline;
+}
+
+/* PLANET/STAR 
+    LABELS */
+#name {
+    text-align: center;
+    position: absolute;
+    top: 101%;
+    right: 50%;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 300;
+    transform: translate(50%,-20%);
+    color: #6f7f94;
+}
+
+/* PLANET/STAR 
+    INITIAL POSITION AND SIZE */
+.circle {
+    height: 0px;
+    width: 0px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 50%;
+    right: -50px;
+    transform: translatex(50%);
+    overflow: visible !important;
+    display: none;
+    
+}
+
+.circle:before {
+  content: "";
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 100% 0%, #ffffff, rgba(255, 255, 255, 0) 58%);
+  -webkit-filter: blur(5px);
+  z-index: 2;
+
+}
+.circle:after {
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at 70% 0%, rgba(245, 237, 48, 0), rgba(0, 0, 0, 0.2) 50%, #000 100%);
+}
+.circle .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+    -webkit-transform: rotateX(90deg) translateZ(-160px);
+    transform: rotateX(90deg) translateZ(-160px);
+    z-index: 1; }
+
+.galaxy {
+    height: 0px;
+    width: 0px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 50%;
+    right: -50px;
+    transform: translatex(50%);
+    overflow: visible !important;
+    display: none;
+}
+
+/* PLANET/STAR 
+    BACKGROUNDS */
+#earth {
+    background: url('img/earth.png');
+    
+}
+
+#jupiter {
+    background: repeating-linear-gradient(
+        #a59186 ,
+        #c99039 ,
+        #d8ca9d ,
+        #c99039 ,
+        #e3dccb ,
+        #c99039 ,
+        #ebf3f6 
+        );
+    
+}
+
+#redspot {
+    background-color: darkorange;
+    height: 10%;
+    width: 20%;
+    border-radius: 50%;
+    position: relative;
+    top: 70%;
+    left: 50%;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+}
+
+#sun {
+    background: linear-gradient(rgba(253, 184, 19, .7),rgba(253, 184, 19, .7)), url(img/fire.jpg);
+}
+
+#sirius {
+    background: linear-gradient(rgba(181, 199, 255, .7),rgba(181, 199, 255, .7)), url(img/fire.jpg);
+}
+
+#pollux {
+	background: linear-gradient(rgba(255, 227, 190, .7),rgba(255, 227, 190, .7)), url(img/fire.jpg);
+}
+
+#aldebaran {
+	background: linear-gradient(rgba(255, 204, 138, 0.8),rgba(255, 204, 138, 0.8)), url(img/fire.jpg);
+}
+
+#rigel {
+	background: linear-gradient(rgba(182, 206, 255, 0.8),rgba(182, 206, 255, 0.8)), url(img/fire.jpg);
+}
+
+#betelgeuse {
+	background: linear-gradient(rgba(255, 204, 138, 0.8),rgba(255, 204, 138, 0.8)), url(img/fire.jpg);
+}
+
+#scuti {
+	background: linear-gradient(rgba(255, 187, 123, 0.8),rgba(255, 187, 123, 0.8)), url(img/fire.jpg);
+}
+
+.orbit {
+    height: 0px;
+    width: 0px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 50%;
+    right: -50px;
+    transform: translatex(50%);
+    overflow: visible !important;
+    display: none;
+    background-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffffff;
+    z-index: 8;
+}
+
+#innerKB {
+    background: rgba(0, 0, 0, 1); !important
+    border: none;
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, .5);1
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, .5);
+    z-index: 7;
+}
+
+#outerKB {
+    background-image: url(img/debris.png);
+    background-size: contain;
+    border: none;
+    box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 1);
+    box-shadow: inset 0 0 20px 20px rgba(0, 0, 0, .5);
+    z-index: 6;!important
+}
+
+#halley {
+    transform: translateX(99%);
+    z-index: 9; !important
+}
+
+#termShock {
+    z-index: 5;
+}
+
+#innerOort {
+    background: rgba(0, 0, 0, 1); !important
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, .5);
+    z-index: 4;
+}
+
+#outerOort {
+    box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 1);
+    box-shadow: inset 0 0 20px 20px rgba(0, 0, 0, .5);
+    background-image: url(img/debris.png);
+    background-size: contain;
+    border: none;
+    z-index: 3;
+}
+
+.star {
+    height: 1px;
+    width: 2px;
+    position: absolute;
+    bottom: 50%;
+    right: -50px;
+    overflow: visible !important;
+    background-color: white;;
+}
+
+#orionArm {
+    position: absolute;
+    bottom: 20%;
+    height: 100%;
+    background-image: url(img/arm.png);
+    background-size: 100% 100%; 
+    transform: translateX(50%);
+    display: none;
+}
+
+#milkyWay {
+    background-image: url(img/milky-way.png);
+    display: none;
+    background-size: 90% 90%; 
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#andromeda {
+    background-image: url(img/Andromeda.png);
+    display: none;
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: inset 0 0 3rem black,inset 0 0 3rem black,inset 0 0 3rem black,inset 0 0 3rem black;
+}
+
+#messier {
+    background-image: url(img/ellipgala.png);
+    display: none;
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: inset 0 0 10rem black,inset 0 0 3rem black,inset 0 0 3rem black,inset 0 0 3rem black;
+}
+
+#UGC {
+    background-image: url(img/milky-way.png);
+    display: none;
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: inset 0 0 3rem black,inset 0 0 3rem black,inset 0 0 3rem black,inset 0 0 3rem black;
+}
+
+#NGC {
+    background-image: url(img/ellipgala.png);
+    display: none;
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: inset 0 0 10rem black,inset 0 0 10rem black,inset 0 0 10rem black,inset 0 0 10rem black;
+}
+
+#virgo {
+    background-image: url(img/virgo.jpg);
+    display: none;
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: inset 0 0 5rem black,inset 0 0 5rem black,inset 0 0 5rem black,inset 0 0 5rem black;
+}
+
+#laniakea {
+    background-image: url(img/lan.jpg);
+    display: none;
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: inset 0 0 5rem black,inset 0 0 5rem black,inset 0 0 5rem black,inset 0 0 5rem black;
+}
+
+#lqg {
+    background-image: url(img/wall1.png);
+    display: none;
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: inset 0 0 5rem black,inset 0 0 5rem black,inset 0 0 5rem black,inset 0 0 5rem black;
+}
+
+#hercules {
+    background-image: url(img/wall2.png);
+    display: none;
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: inset 0 0 5rem black,inset 0 0 5rem black,inset 0 0 5rem black,inset 0 0 5rem black;
+}
+
+#universe {
+    background-image: url(simg/uni.jpg);
+    display: none;
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: inset 0 0 5rem black,inset 0 0 5rem black,inset 0 0 5rem black,inset 0 0 5rem black;
+}
