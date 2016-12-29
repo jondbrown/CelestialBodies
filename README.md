@@ -1,7 +1,7 @@
 # CelestialBodies
 
 A jquery site that shows and compares diamters of Earth, the Sun, other stars, galaxies, and large commic structures.
-
+Demonstration can be seen <a href="http://jonbrownsstupidapps.com/apps/database/space.html">here</a>.
 ###Implementaion
 In space.html: Replace the lines 
 ```html
