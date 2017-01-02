@@ -1201,7 +1201,7 @@ $(document).ready(function () {
                 width: width * 0.075,
                 right: '70%',
                 bottom: '20%'
-            }).css('box-shadow', 'inset 0 0 10rem black,inset 0 0 10rem black,inset 0 0 10rem black,inset 0 0 10rem black');
+            }).css('box-shadow', 'inset 0 0 1rem black,inset 0 0 1rem black,inset 0 0 1rem black,inset 0 0 1rem black');
             $("#messier").fadeIn().animate({
                 width: width * 0.5,
                 height: width * 0.5,
@@ -1240,13 +1240,13 @@ $(document).ready(function () {
                 height: width * 0.29447,
                 right: '60%',
                 bottom: '20%'
-            }).css('box-shadow', 'inset 0 0 10rem black,inset 0 0 10rem black,inset 0 0 10rem black,inset 0 0 10rem black');
+            }).css('box-shadow', 'inset 0 0 1rem black,inset 0 0 1rem black,inset 0 0 1rem black,inset 0 0 1rem black');
             $("#UGC").fadeIn().animate({
                 width: width * 0.5,
                 height: width * 0.5,
                 right: '30%',
                 bottom: '20%'
-            }).css('box-shadow', 'inset 0 0 10rem black,inset 0 0 10rem black,inset 0 0 10rem black,inset 0 0 10rem black');
+            }).css('box-shadow', 'inset 0 0 1rem black,inset 0 0 1rem black,inset 0 0 1rem black,inset 0 0 1rem black');
             hideObjectsRight('#NGC');
         },
 
@@ -1292,7 +1292,7 @@ $(document).ready(function () {
                 height: width * 0.5,
                 right: '30%',
                 bottom: '20%'
-            }).css('box-shadow', 'inset 0 0 10rem black,inset 0 0 10rem black,inset 0 0 10rem black,inset 0 0 10rem black');
+            }).css('box-shadow', 'inset 0 0 1rem black,inset 0 0 1rem black,inset 0 0 1rem black,inset 0 0 1rem black');
             hideObjectsRight('#virgo');
         },
 
